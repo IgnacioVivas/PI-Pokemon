@@ -1,0 +1,22 @@
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    .pagination {
+        display: flex;
+        // gap: 20px;
+        border: 1px solid yellow;
+        .page-item {
+            border-right: 1px solid yellow;
+            padding: 6px 14px;
+            cursor: pointer;
+            .page-link {
+                color: white;
+                &:last-of-type {
+                    border-right: unset;
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+#input-wrapper {
+  z-index: 100;
+  display: flex;
+  width: 35vw;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  min-width: 285px;
+  position: relative;
+  input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 100%;
+    z-index: 1;
+  }
+  #img-search {
+    position: absolute;
+    z-index: 1;
+    right: 8px;
+  }
+}

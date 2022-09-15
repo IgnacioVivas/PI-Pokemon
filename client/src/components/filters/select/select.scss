@@ -1,0 +1,74 @@
+
+.container {
+    
+    .selectbox {
+        position: relative;
+        width: 200px;
+        .select {
+            background-color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: .2s ease all;
+            padding: 8px;
+            border:  2px solid transparent;
+            position: relative;
+            .contents-select {
+                .title {
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    color: black;
+                }
+            }
+        }
+        .select.active,
+        .select:hover{
+            box-shadow: 4px 5px 6px rgba(132, 128, 128, 0.498);
+            border:  2px solid grey;
+
+        }
+        .select.active:before {
+            content: "";
+            display: block;
+            height: 0;
+            width: 0;
+            border-top: 12px solid #EECE00;
+            border-right: 12px solid transparent;
+            border-left: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            position: absolute;
+            bottom: -25px;
+            left: calc(50% - 12px);
+        }
+        .options {
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 4px 5px 6px rgba(132, 128, 128, 0.498);
+            height: 185px;
+            overflow: auto;
+            z-index: 100;
+            width: 100%;
+            display: none;
+            position: absolute;
+            .option {
+                .content-option {
+                    display: flex;
+                    align-items: center;
+                    transition: .2s ease all;
+                    padding: 8px; /****/
+                    &:hover {
+                        background-color: #AD1E00;
+                    }
+                    &:hover span {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .options.active {
+            display: block;
+        }
+    }
+}

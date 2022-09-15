@@ -1,0 +1,100 @@
+#detail-container {
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+    #width-container {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        #arrow-go-back {
+            display: flex;
+            justify-content: start;
+            width: 100%;
+            margin-bottom: 30px;
+            a {
+                img {
+                    width: 36px;
+                }
+            }
+        }
+        #card-detail {
+            width: 400px;
+            height: fit-content;
+            background-color: white;
+            border-radius: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            #info-top {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 30px;
+                p {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+                #health-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    img {
+                        width: 17px;
+                    }
+                }
+            }
+            #img-section {
+                background-image: url(../../images/pokebola.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                padding: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #img-container {
+                    background-color: white;
+                    border: 8px solid black;
+                    border-radius: 100%;
+                    width: 200px;
+                    height: 200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 60%;
+                    }
+                }
+            }
+            #info-bottom {
+                padding: 30px 60px;
+                border-top: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #center-container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    row-gap: 3px;
+                    column-gap: 50px;
+                    p {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #card-detail{
+        width: 100% !important;
+        #img-section {
+            padding: 20px;
+            #info-bottom {
+                padding: 30px 20px;
+            }
+        }
+    }
+}

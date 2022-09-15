@@ -1,0 +1,75 @@
+#form-container {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    width: 90%;
+    justify-content: space-around;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+        min-width: 290px;
+        max-width: 350px;
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 16px;
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+            }
+            input {
+                border-radius: 10px;
+                border: none;
+                padding: 8px 10px;
+                margin-bottom: 4px;
+            }
+            select {
+                border-radius: 10px;
+                border: none;
+                padding: 8px 10px;
+                margin-bottom: 4px;
+            }
+            label {
+                color: white;
+                margin-bottom: 8px;
+                text-transform: capitalize;
+            }
+            input.danger {
+                border: 2px solid red;
+            }
+            select.danger {
+                border: 2px solid red;
+            }
+            p.danger {
+                color: red;
+                font-size: 14px;
+            }
+        }
+        #btn-input {
+            padding: 5px 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            background-color: yellow;
+            color: black;
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #form-container {
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #form-container {
+        gap: 50px;
+    }
+}
